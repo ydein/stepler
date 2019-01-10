@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html>
+<html lang="ru">
 <head>
 	<title>Ручной запайщик пакетов</title>
 	<meta charset="utf-8">
@@ -7,7 +7,7 @@
 </head>
 <body>
 <header class="header centered">
-	<h1 class="header__heading"><img class="header__logo" src="img/logo.png"></h1>
+	<h1 class="header__heading"><img class="header__logo" src="img/logo.png" alt=""></h1>
 	<nav class="header__nav">
 		<ul class="menu header__menu">
 			<li class="header__item"><a class="link header__link" href="#">О продукте</a></li>
@@ -84,11 +84,11 @@
 				<input class="ordering-form__item" type="text" name="company-name" placeholder="Название организации">
 				<label class="ordering-form__label">
 					<input class="ordering-form__checkbox" type="checkbox" name="invoice">
-					<div class="checkbox__text">Выставить счет на оплату</div>
+					<span class="checkbox__text">Выставить счет на оплату</span>
 				</label>
 				<label class="ordering-form__label">
 					<input class="ordering-form__checkbox" type="checkbox" name="agreement" checked>
-					<div class="checkbox__text">Согласен получать информацию по электронной почте</div>
+					<span class="checkbox__text">Согласен получать информацию по электронной почте</span>
 				</label>			
 			<p class="text ordering-form__text">Наши операторы свяжуться с Вами в рабочее время</p>
 			</div>
@@ -109,13 +109,13 @@
 			<li class="text features-list__item">Пластиковый корпус обеспечивает низкую стоимость оборудования</li>
 			<li class="text features-list__item">Качественные трансформаторы и другие электрические компоненты будут работать долго и надежно, принося прибыль</li>
 			<li class="text features-list__item">Высокое качество механических узлов обеспечивает качество запайки и надежность в работе</li>
+		</ul>
 	</div>		
 		<figure class="features__figure">
 			<img class="featuress__img" src="img/features_img.jpg" alt="">
 			<figcaption class="features__figcaption">Запаковщик FS-200</figcaption>
 		</figure>
 	
-	</ul>
 </div><!--end .features-->
 <div class="advantages centered">
 	<img class="advantages__img" src="img/advantages_img.jpg" alt="">
@@ -207,11 +207,11 @@
 			<input class="ordering-form__item" type="email" name="email" placeholder="Email">
 				<label class="ordering-form__label">
 					<input class="ordering-form__checkbox" type="checkbox" name="invoice">
-					<div class="checkbox__text">Выставить счет на оплату</div>
+					<span class="checkbox__text">Выставить счет на оплату</span>
 				</label>
 				<label class="ordering-form__label">
 					<input class="ordering-form__checkbox" type="checkbox" name="agreement" checked>
-					<div class="checkbox__text">Согласен получать информацию по электронной почте</div>
+					<span class="checkbox__text">Согласен получать информацию по электронной почте</span>
 				</label>	
 			<p class="text ordering-form__text">Наши операторы свяжуться с Вами в рабочее время</p>
 		</div>
@@ -261,23 +261,37 @@ FS-500H</figcaption>
 	<h3 class="heading e-shop__heading">Наш интернет-магазин</h3>
 	<button class="button ordering-form__item ordering-form__button e-shop__button">Смотреть</button>
 </div><!--end .e-shop-->
-<form class="form ordering-form bg_red" action="#" method="post">
-	<h3 class="heading ordering-form__heading">Заказать</h3>
-	<input class="ordering-form__item" type="text" name="name" placeholder="ФИО">
-	<input class="ordering-form__item" type="text" name="company-name" placeholder="Название организации">
-	<input class="ordering-form__item" type="tel" name="phone" placeholder="Телефон">
-	<input class="ordering-form__item" type="email" name="email" placeholder="Email">
-	<label class="ordering-form__label">Выставить счет на оплату<input class="ordering-form__item" type="checkbox" name="invoice"></label>
-	<label class="ordering-form__label">Согласен получать информацию по электронной почте<input class="ordering-form__item" type="checkbox" name="agreement" checked></label>
-	<input class="button ordering-form__item ordering-form__button" type="submit" value="Заказать">
-	<p class="text ordering-form__text">Наши операторы свяжуться с Вами в рабочее время</p>
+
+<form class="form ordering ordering_nobg ordering-form bg_red" action="#" method="post">
+	<div class="centered">
+		<h3 class="heading ordering-form__heading">Заказать</h3>
+		<div class="ordering-form__fields">
+			<input class="ordering-form__item" type="text" name="name" placeholder="ФИО">
+			<input class="ordering-form__item" type="text" name="company-name" placeholder="Название организации">
+			<input class="ordering-form__item" type="tel" name="phone" placeholder="Телефон">
+			<input class="ordering-form__item" type="email" name="email" placeholder="Email">
+				<label class="ordering-form__label">
+					<input class="ordering-form__checkbox" type="checkbox" name="invoice">
+					<span class="checkbox__text">Выставить счет на оплату</span>
+				</label>
+				<label class="ordering-form__label">
+					<input class="ordering-form__checkbox" type="checkbox" name="agreement" checked>
+					<span class="checkbox__text">Согласен получать информацию по электронной почте</span>
+				</label>	
+			<p class="text ordering-form__text">Наши операторы свяжуться с Вами в рабочее время</p>
+		</div>
+		<input class="button ordering-form__item ordering-form__button" type="submit" value="Заказать">		
+	</div>
 </form>
+
 </main>
 <footer>
 	<div class="menu footer__menu">
-		<a class="link menu__item" href="">Политика конфиденциальности и оферта</a>
-		<a class="link menu__item" href="">Пользовательская оферта</a>
-		<a class="link phone footer__phone" href="tel:+74952301033">+74952301033</a>
+		<div class="centered">
+			<a class="menu__link menu__item" href="">Политика конфиденциальности и оферта</a>
+			<a class="menu__link menu__item" href="">Пользовательская оферта</a>
+			<a class="link phone  menu__item footer__phone" href="tel:+74952301033">+7 495 230 10 33</a>
+		</div>
 	</div>
 </footer>
 

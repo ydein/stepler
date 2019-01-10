@@ -570,6 +570,33 @@ img {
 	margin: 0 42.5% 6%;
 	text-align: center;
 }
+/*************FOOTER**************/
+.footer__menu {
+	background-color: #004c66;
+	overflow: hidden;
+	}
+.menu__link {	
+	color: #43b5d6;
+	text-decoration: underline;
+	margin: 2% 5% 2% 0;
+}
+	.menu__link:hover {
+		text-decoration: none;
+	}
+.footer__phone {
+	font-family: "UniNeueBold";
+	color: #fff;
+	font-size: 1.5em;
+	background: url('img/phone.png') 0 0 no-repeat;
+	padding-left: 3.8%;
+	margin-top: 1.4063%;
+	letter-spacing: 0.05em;
+	text-align: left;	
+	float: right;
+	width: 255px;
+	white-space: nowrap;
+}
+
 /*************MEDIA**************/
 
 @media only screen and (min-width: 1980px) {	
@@ -627,6 +654,11 @@ img {
 		.modification-table__col {
 			font-size: 0.95em;
 			padding-left: 5%;
+		}
+		.menu__item {			
+			display: block;
+			clear: both;
+			float: left;
 		}
 }
 @media only screen and (max-width: 768px) {
@@ -718,6 +750,9 @@ img {
 			width: 30%;
 			display: inline-block;
 			margin: 1% 35% 6%;
+		}
+		.footer__phone {
+			padding-left: 30px;
 		}
 
 }
@@ -836,5 +871,12 @@ img {
 		.e-shop__button {
 			width: 200px;
 			margin: 15px 0 50px 40px;
+		}
+		.menu__item  {
+			padding-left: 6%;
+		}
+		.footer__phone {
+			margin-left: 6%;
+			padding-left: 30px;
 		}
 }
