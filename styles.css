@@ -282,16 +282,6 @@ img {
     opacity: 1;
   }
 
-/*.slider__arrow_left {
-	width: 13px;
-	height: 21px;
-	background: url('img/arrow_l.png') 0 0 no-repeat;
-}
-.slider__arrow_right {
-	width: 13px;
-	height: 21px;
-	background: url('img/arrow_r.png') 0 0 no-repeat;
-}*/
 /*************DESCRIPTION**************/
 .description {
 	overflow: hidden;
@@ -433,7 +423,6 @@ img {
 /*************ADVANTAGES**************/
 .advantages {
 	clear: both;
-	padding-bottom: 23%;
 }
 .advantages__img {
 	max-width: 604px;
@@ -470,13 +459,57 @@ img {
 	border-bottom: 3px solid #004c66;
 	margin-right: 1%;
 }
-	.advantages__border:last-child {
+	/*.advantages__border:last-child {
 		margin-right: 0;
 		border-bottom: 3px solid #caf8fb;
 	}
 	.advantages__border:nth-child(12), .advantages__border:nth-child(11) {
 		border-bottom: 3px solid #caf8fb;
+	}*/
+	.advantages__border:last-child {
+		margin-right: 0;
 	}
+	.advantages__border:hover {		
+		border-bottom: 3px solid #caf8fb;
+	}
+.advantages__item-2 {
+	clear: both;
+}
+/*************ADVANTAGES-SLIDER**************/
+.advantages__carousel-wrapper {
+	position: relative;	
+	height: 400px;
+	overflow: hidden;
+}
+.advantages__carousel-item {
+	position: absolute;
+	top: 0;
+	left: 0;
+	bottom: 0;
+	right: 0;
+	opacity: 0;
+	transition: all 0.5s ease-in-out;
+}
+
+  [id^="advantages__target-item"] {
+    display: none;
+  }
+  .advantages__item-1 {
+    z-index: 2;
+    opacity: 1;
+  }
+    *:target ~ .advantages__item-1 {
+    opacity: 0;
+  }
+    #advantages__target-item-1:target ~ .advantages__item-1 {
+    opacity: 1;
+  }
+    #advantages__target-item-2:target ~ .advantages__item-2, #advantages__target-item-3:target ~ .advantages__item-3 {
+    z-index: 3;
+    opacity: 1;
+  }
+
+
 /*************TABLE**************/
 .modification-table {
 	border-collapse: collapse;
@@ -757,11 +790,8 @@ img {
 			clear: both;
 			width: 100%;
 		}
-		.advantages__border {
-			display: none;
-		}
-		.advantages {
-			padding-bottom: 30%;
+		.advantages__carousel-wrapper {
+			height: 650px;
 		}
 		.modification-table__col, .modification-table__th {
 			font-size: 0.9em;
@@ -830,7 +860,9 @@ img {
 		.carousel-wrapper {
 			height: 470px;
 		}
-
+		.advantages__carousel-wrapper {
+			height: 550px;
+		}
 		
 }
 @media only screen and (max-width: 320px) {	
@@ -922,5 +954,11 @@ img {
 		.footer__phone {
 			margin-left: 6%;
 			padding-left: 30px;
+		}
+		.advantages__border {
+			width: 8%;
+		}
+		.advantages__border:nth-of-type(1), .advantages__heading {
+			margin-left: 3%;
 		}
 }
